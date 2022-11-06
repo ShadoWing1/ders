@@ -33,7 +33,7 @@ int main(int argc, char const *argv[])
     std::cout << ": ";
     std::cin >> k;
 
-    auto a = 1;
+    int a = 1;
 
     if(k == 0)
     {
@@ -41,24 +41,21 @@ int main(int argc, char const *argv[])
         {
             std::cout << "Markete hos geldiniz" << "\n";
             std::cout << "\n";
-            std::cout << "Marketten Cikmak icin: 0" << "\n";
-            std::cout << "Ürünleri incelemek icin: 1" << "\n";
+            std::cout << "Marketten Cikmak icin: 1" << "\n";
+            std::cout << "Ürünleri incelemek icin: 2" << "\n";
             std::cout << ":";std::cin >> a;
+            std::cout << "a: " <<a << '\n' ;
             std::cout << a << "\n";
-            if(a == 0)
+            if(a == 1)
             {
                 yaz("marketten cikiliyor...",sil);
             }
-            else if(a == 1)
+            else if(a == 2)
             {   
                 std::cout << sil"Ürün listesi geliyor" << "\n";
-                break;    
-
-
-
+                break;
             }
-
-            else if(a!=0 && a != 1)
+            else
             {
                 std::cout << sil"Anlasilamadi tekrar deneyin" << "\n";
 
