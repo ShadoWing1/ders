@@ -15,7 +15,7 @@ using string = std::string;
 int main(int argc, char const *argv[])
 {   
     int k;
-
+    
     std::map<string,int> list;
     list["Elma"]  = 314785;
     list["Armut"] = 359415;
@@ -33,71 +33,33 @@ int main(int argc, char const *argv[])
     std::cout << ": ";
     std::cin >> k;
 
-    auto a = 1;
+    int a = 1;
 
     if(k == 0)
     {
-        while(a != 0)
+        while(a!=1 or a==2 or a!=0)
         {
             std::cout << "Markete hos geldiniz" << "\n";
             std::cout << "\n";
-            std::cout << "Marketten Cikmak icin: 0" << "\n";
-            std::cout << "Ürünleri incelemek icin: 1" << "\n";
+            std::cout << "Marketten Cikmak icin: 1" << "\n";
+            std::cout << "Ürünleri incelemek icin: 2" << "\n";
             std::cout << ":";std::cin >> a;
+            std::cout << "a: " <<a << '\n' ;
             std::cout << a << "\n";
-            if(a == 0)
+            if(a == 1)
             {
                 yaz("marketten cikiliyor...",sil);
             }
-            else if(a == 1)
+            else if(a == 2)
             {   
                 std::cout << sil"Ürün listesi geliyor" << "\n";
                 break;    
-
-
-
-            }
-
-            else if(a!=0 && a != 1)
-            {
-                std::cout << sil"Anlasilamadi tekrar deneyin" << "\n";
-
-            }
-        }
-    }
-
-
-    else if(k == 1)
-    {
-        while(a != 0)
-        {
-            std::cout << "Avm'ye hos geldiniz" << "\n";
-            std::cout << "\n";
-            std::cout << "Avm den Cikmak icin: 0" << "\n";
-            std::cout << "Ürünleri incelemek icin: 1" << "\n";
-            std::cout << ":";std::cin >> a;
-            std::cout << a << "\n";
-            if(a == 0)
-            {
-                yaz("Avm den cikiliyor...",sil);
-            }
-            else if(a == 1)
-            {   
-                std::cout << sil"Ürün listesi geliyor" << "\n";
-                break;    
-
-
-
             }
 
             else
             {
                 std::cout << sil"Anlasilamadi tekrar deneyin" << "\n";
-
             }
         }
-
     }
-
-    return 0;
 }
